@@ -57,17 +57,22 @@ sudo apt-get install libsqlite3-dev
 ## Usage
 
 You can use lightNet just like you would use darknet. The command line interface remains the same, with additional options and features for the new improvements. For a comprehensive guide on using darknet, please refer to the official darknet documentation.
-
-```test for detection
-./lightNet detector test data/bdd100k.data cfg/lightNet-BDD100K-1280x960.cfg weights/lightNet-BDD100K-1280x960.weights [image_name]
-```
+As for advanced usage, let's wait until the next release. Stay tuned!
 
 
 ## Examples
 
 You can find examples of using lightNet's features in the examples directory. These examples demonstrate how to use the new features and optimizations in lightNet to train and test powerful CNN models.
 
-For example, the semantic segmentation example demonstrates how to train a model to segment different objects within an image, while the channel pruning example shows how to reduce the size of a CNN model without significantly affecting its performance.
+### Inference for Detection
+```
+./lightNet detector [test/demo] data/bdd100k.data cfg/lightNet-BDD100K-1280x960.cfg weights/lightNet-BDD100K-1280x960.weights [image_name/video_name]
+```
+
+### Inference for Segmentation
+```
+/lightNet segmenter [test/demo] data/bdd100k.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
+```
 
 ## License
 
