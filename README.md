@@ -1,19 +1,74 @@
-lightNet
+# lightNet
 
-lightNet is an open-source deep learning framework based on AlexeyAB's darknet, with additional improvements to enhance its capabilities and performance. This repository aims to provide an easy-to-use and efficient platform for various computer vision tasks while paying homage to the original darknet and its contributors, including YOLO's creator Joseph Redmon and Alexey Bochkovskiy.
-Improvements
+lightNet is a deep learning framework based on the popular darknet platform, designed to create efficient and high-speed Convolutional Neural Networks (CNNs) for computer vision tasks. The framework has been improved and optimized to provide a more versatile and powerful solution for various deep learning challenges.
 
-The following improvements have been implemented in lightNet:
+## Table of Contents
 
-    Semantic Segmentation: The framework now supports training models for semantic segmentation tasks, allowing for pixel-wise classification of images.
-	    2:4 Structured Sparsity: lightNet incorporates 2:4 structured sparsity, which enables the creation of more efficient and compact models by reducing redundancy in the neural network's structure.
-		    Channel Pruning: To further optimize the network, channel pruning has been added, which removes less significant channels from the model, leading to a lighter and faster network without sacrificing accuracy.
-			    Post Training Quantization (under maintenance): Post-training quantization is available for further compression and acceleration of trained models, reducing the memory footprint and computational resources required during inference.
-				    SQLite Logging: lightNet supports logging training and validation metrics to SQLite databases, enabling better organization and analysis of the training process.
-					
-					Getting Started
-					
-					Please refer to the original darknet repository for detailed instructions on how to set up and use the framework. The same procedures apply to lightNet, with the additional features and improvements mentioned above.
-					License
-					
-					This project is released under the YOLO license, which permits unrestricted use, distribution, and modification. If we meet someday and you think the work is worth it, feel free to buy us a beer in return. See the LICENSE file for more information.
+-   [Key Features](#key-features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Examples](#examples)
+-   [License](#license)
+
+## Key Features
+
+lightNet incorporates several cutting-edge techniques and optimizations to improve the performance of CNN models. The main features include:
+
+-   Semantic Segmentation Learning
+-   2:4 Structured Sparsity
+-   Channel Pruning
+-   Post Training Quantization (Under Maintenance)
+-   SQLite Log Storage
+
+### Semantic Segmentation Learning
+
+lightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
+
+For example, semantic segmentation can be used to identify individual objects within an image, such as cars or pedestrians, and label each pixel in the image with the corresponding object class. This can be useful for a variety of applications, including autonomous driving and medical image analysis.
+
+### 2:4 Structured Sparsity
+
+The 2:4 structured sparsity technique is a novel method for reducing the number of parameters in a CNN model while maintaining its performance. This approach enables the model to be more efficient and requires less computation, resulting in faster training and inference times.
+
+For example, using 2:4 structured sparsity can reduce the memory footprint and computational requirements of a CNN model, making it easier to deploy on resource-constrained devices such as mobile phones or embedded systems.
+
+### Channel Pruning
+
+Channel pruning is an optimization technique that reduces the number of channels in a CNN model without significantly affecting its accuracy. This method helps to decrease the model size and computational requirements, leading to faster training and inference times while maintaining performance.
+
+For example, channel pruning can be used to reduce the number of channels in a CNN model for image classification, while still maintaining a high level of accuracy. This can be useful for deploying models on devices with limited computational resources.
+
+### Post Training Quantization (Under Maintenance)
+
+Post training quantization is a technique for reducing the memory footprint and computational requirements of a trained CNN model. This feature is currently under maintenance and will be available in a future release.
+
+### SQLite Log Storage
+
+lightNet supports storing training logs in SQLite databases, making it easier to analyze and visualize training progress over time. This feature enables users to efficiently manage their training logs and better understand the performance of their models.
+
+## Installation
+
+Please follow the darknet installation instructions to set up lightNet on your machine. Additionaly, you need install sqlite3-dev.
+
+```
+sudo apt-get install libsqlite3-dev
+```
+
+## Usage
+
+You can use lightNet just like you would use darknet. The command line interface remains the same, with additional options and features for the new improvements. For a comprehensive guide on using darknet, please refer to the official darknet documentation.
+
+```test for detection
+./lightNet detector test data/bdd100k.data cfg/lightNet-BDD100K-1280x960.cfg weights/lightNet-BDD100K-1280x960.weights [image_name]
+```
+
+
+## Examples
+
+You can find examples of using lightNet's features in the examples directory. These examples demonstrate how to use the new features and optimizations in lightNet to train and test powerful CNN models.
+
+For example, the semantic segmentation example demonstrates how to train a model to segment different objects within an image, while the channel pruning example shows how to reduce the size of a CNN model without significantly affecting its performance.
+
+## License
+
+lightNet is released under the same YOLO license as darknet. You are free to use, modify, and distribute the code as long as you retain the license notice.
