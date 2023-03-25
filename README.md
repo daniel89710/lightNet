@@ -1,6 +1,6 @@
-# lightNet
+# LightNet
 
-lightNet is a deep learning framework based on the popular darknet platform, designed to create efficient and high-speed Convolutional Neural Networks (CNNs) for computer vision tasks. The framework has been improved and optimized to provide a more versatile and powerful solution for various deep learning challenges.
+LightNet is a deep learning framework based on the popular darknet platform, designed to create efficient and high-speed Convolutional Neural Networks (CNNs) for computer vision tasks. The framework has been improved and optimized to provide a more versatile and powerful solution for various deep learning challenges.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ lightNet is a deep learning framework based on the popular darknet platform, des
 
 ## Key Features
 
-lightNet incorporates several cutting-edge techniques and optimizations to improve the performance of CNN models. The main features include:
+LightNet incorporates several cutting-edge techniques and optimizations to improve the performance of CNN models. The main features include:
 
 -   Semantic Segmentation Learning
 -   2:4 Structured Sparsity
@@ -22,7 +22,7 @@ lightNet incorporates several cutting-edge techniques and optimizations to impro
 
 ### Semantic Segmentation Learning
 
-lightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
+LightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
 
 For example, semantic segmentation can be used to identify individual objects within an image, such as cars or pedestrians, and label each pixel in the image with the corresponding object class. This can be useful for a variety of applications, including autonomous driving and medical image analysis.
 
@@ -44,11 +44,11 @@ Post training quantization is a technique for reducing the memory footprint and 
 
 ### SQLite Log Storage
 
-lightNet supports storing training logs in SQLite databases, making it easier to analyze and visualize training progress over time. This feature enables users to efficiently manage their training logs and better understand the performance of their models.
+LightNet supports storing training logs in SQLite databases, making it easier to analyze and visualize training progress over time. This feature enables users to efficiently manage their training logs and better understand the performance of their models.
 
 ## Installation
 
-Please follow the darknet installation instructions to set up lightNet on your machine. Additionaly, you need install sqlite3-dev.
+Please follow the darknet installation instructions to set up LightNet on your machine. Additionaly, you need install sqlite3-dev.
 
 ```
 sudo apt-get install libsqlite3-dev
@@ -56,13 +56,13 @@ sudo apt-get install libsqlite3-dev
 
 ## Usage
 
-You can use lightNet just like you would use darknet. The command line interface remains the same, with additional options and features for the new improvements. For a comprehensive guide on using darknet, please refer to the official darknet documentation.
+You can use LightNet just like you would use darknet. The command line interface remains the same, with additional options and features for the new improvements. For a comprehensive guide on using darknet, please refer to the official darknet documentation.
 As for advanced usage, let's wait until the next release. Stay tuned!
 
 
 ## Examples
 
-You can find examples of using lightNet's features in the examples directory. These examples demonstrate how to use the new features and optimizations in lightNet to train and test powerful CNN models.
+You can find examples of using LightNet's features in the examples directory. These examples demonstrate how to use the new features and optimizations in LightNet to train and test powerful CNN models.
 
 ### Inference for Detection
 ```
@@ -86,4 +86,4 @@ You can find examples of using lightNet's features in the examples directory. Th
 
 ## License
 
-lightNet is released under the same YOLO license as darknet. You are free to use, modify, and distribute the code as long as you retain the license notice.
+LightNet is released under the same YOLO license as darknet. You are free to use, modify, and distribute the code as long as you retain the license notice.
