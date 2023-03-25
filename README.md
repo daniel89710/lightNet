@@ -73,6 +73,16 @@ You can find examples of using lightNet's features in the examples directory. Th
 ```
 /lightNet segmenter [test/demo] data/bdd100k.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
 ```
+## Results
+
+### Results on BDD100K
+
+| Model | Resolutions | GFLOPS | Params | mAP50 | AP@car| AP@person | cfg | weights |
+|---|---|---|---|---|---|---|---|---|
+| lightNet | 1280x960 | 58.01 | 9.0M | 55.7 | 81.6 | 67.0| | |
+| yolov8x | 640x640 | 246.55 | 70.14M | 55.2 | 80.0 | 63.2 | | |
+ 
+ 
 
 ## License
 
