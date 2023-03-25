@@ -14,15 +14,14 @@ LightNet is a deep learning framework based on the popular darknet platform, des
 
 LightNet incorporates several cutting-edge techniques and optimizations to improve the performance of CNN models. The main features include:
 
--   Semantic Segmentation Learning
+-   Multi-task Learning
 -   2:4 Structured Sparsity
 -   Channel Pruning
 -   Post Training Quantization (Under Maintenance)
--   SQLite Log Storage
 
 ### Semantic Segmentation Learning
 
-LightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
+In addition to object detection, LightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
 
 For example, semantic segmentation can be used to identify individual objects within an image, such as cars or pedestrians, and label each pixel in the image with the corresponding object class. This can be useful for a variety of applications, including autonomous driving and medical image analysis.
 
@@ -36,19 +35,16 @@ For example, using 2:4 structured sparsity can reduce the memory footprint and c
 
 Channel pruning is an optimization technique that reduces the number of channels in a CNN model without significantly affecting its accuracy. This method helps to decrease the model size and computational requirements, leading to faster training and inference times while maintaining performance.
 
-For example, channel pruning can be used to reduce the number of channels in a CNN model for image classification, while still maintaining a high level of accuracy. This can be useful for deploying models on devices with limited computational resources.
+For example, channel pruning can be used to reduce the number of channels in a CNN model for real-time processing on low power processors, while still maintaining a high level of accuracy. This can be useful for deploying models on devices with limited computational resources.
 
 ### Post Training Quantization (Under Maintenance)
 
 Post training quantization is a technique for reducing the memory footprint and computational requirements of a trained CNN model. This feature is currently under maintenance and will be available in a future release.
 
-### SQLite Log Storage
-
-LightNet supports storing training logs in SQLite databases, making it easier to analyze and visualize training progress over time. This feature enables users to efficiently manage their training logs and better understand the performance of their models.
 
 ## Installation
 
-Please follow the darknet installation instructions to set up LightNet on your machine. Additionaly, you need install sqlite3-dev.
+Please follow the darknet installation instructions to set up LightNet on your machine. Additionaly, you need install sqlite3-dev which is used for training logs.
 
 ```
 sudo apt-get install libsqlite3-dev
@@ -71,7 +67,7 @@ You can find examples of using LightNet's features in the examples directory. Th
 
 ### Inference for Segmentation
 ```
-/lightNet segmenter [test/demo] data/bdd100k.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
+/lightNet segmenter [test/demo] data/bdd100k-semseg.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
 ```
 ## Results
 
