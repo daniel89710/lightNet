@@ -10,6 +10,7 @@
 *.lib
 *.dylib
 *.pyc
+*~
 mnist/
 data/
 caffe/
@@ -19,7 +20,7 @@ opencv/
 convnet/
 decaf/
 submission/
-cfg/
+
 temp/
 build/darknet/*
 build_*/
@@ -63,4 +64,5 @@ include/darknet/
 uselib
 uselib_track
 darknet
+lightNet
 vcpkg/
