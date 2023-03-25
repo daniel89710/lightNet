@@ -1,0 +1,4 @@
+classes = 20
+train = dataset/BDD100K/darknet_semseg-BDD100K/train_cleaned_2.lst
+valid = dataset/BDD100K/darknet_semseg-BDD100K/val.lst
+backup = weights

@@ -12,7 +12,6 @@
 *.pyc
 *~
 mnist/
-data/
 caffe/
 grasp/
 images/
