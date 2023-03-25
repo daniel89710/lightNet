@@ -79,8 +79,8 @@ You can find examples of using lightNet's features in the examples directory. Th
 
 | Model | Resolutions | GFLOPS | Params | mAP50 | AP@car| AP@person | cfg | weights |
 |---|---|---|---|---|---|---|---|---|
-| lightNet | 1280x960 | 58.01 | 9.0M | 55.7 | 81.6 | 67.0| | |
-| yolov8x | 640x640 | 246.55 | 70.14M | 55.2 | 80.0 | 63.2 | | |
+| lightNet | 1280x960 | 58.01 | 9.0M | 55.7 | 81.6 | 67.0| [github](https://github.com/daniel89710/lightNet/blob/master/cfg/lightNet-BDD100K-1280x960.cfg) |[GoogleDrive](https://drive.google.com/file/d/1qTBQ0BkIYqcyu1BwC54_Z9T1_b702HKf/view?usp=sharing) |
+| yolov8x | 640x640 | 246.55 | 70.14M | 55.2 | 80.0 | 63.2 | [github](https://github.com/daniel89710/lightNet/blob/master/cfg/yolov8x-BDD100K-640x640.cfg) | [GoogleDrive](https://drive.google.com/file/d/1hrHeugq0-mL6EtxUAi-rkfrzg6KwgCQQ/view?usp=sharing)|
  
  
 
