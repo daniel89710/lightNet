@@ -3,7 +3,6 @@
 *.dSYM
 *.csv
 *.out
-*.png
 *.so
 *.exe
 *.dll
@@ -19,6 +18,7 @@ opencv/
 convnet/
 decaf/
 submission/
+dataset/
 
 temp/
 build/darknet/*
@@ -29,6 +29,9 @@ vcpkg_installed/
 !build/darknet/YoloWrapper.cs
 .fuse*
 *.weights
+*.db
+*.sqlite
+
 build/*.cmake
 build/*.ninja
 build/*.txt
