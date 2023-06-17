@@ -10,6 +10,7 @@
 *.dylib
 *.pyc
 *~
+chart*.png
 mnist/
 caffe/
 grasp/
