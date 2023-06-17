@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'lightnet'
-copyright = '2023, daniel89710'
-author = 'daniel89710'
+copyright = '2023, yunkai1841'
+author = 'yunkai1841'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -18,7 +18,8 @@ extensions = ['myst_parser', 'sphinx_rtd_theme']
 templates_path = ['_templates']
 exclude_patterns = []
 
-language = 'ja'
+# language = 'ja'
+language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

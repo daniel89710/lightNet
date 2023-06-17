@@ -10,6 +10,8 @@ Welcome to lightnet's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   installation
+   training
 
 
 Indices and tables
