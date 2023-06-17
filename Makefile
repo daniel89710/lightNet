@@ -1,20 +1,14 @@
-GPU=0
-
-ifeq ($(GPU), 1)
-	CUDNN=1
-	CUDNN_HALF=1
-else
-	CUDNN=0
-	CUDNN_HALF=0
-endif
-
-OPENCV=0
+GPU=1
+CUDNN=1
+CUDNN_HALF=1
+OPENCV=1
 AVX=0
 OPENMP=0
 LIBSO=0
 ZED_CAMERA=0
 ZED_CAMERA_v2_8=0
 
+#* GPU=0, OPENCV=0 is not supported
 # set GPU=1 and CUDNN=1 to speedup on GPU
 # set CUDNN_HALF=1 to further speedup 3 x times (Mixed-precision on Tensor Cores) GPU: Volta, Xavier, Turing and higher
 # set AVX=1 and OPENMP=1 to speedup on CPU (if error occurs then set AVX=0)
@@ -61,7 +55,7 @@ OS := $(shell uname)
 
 
 VPATH=./src/
-EXEC=lightNet
+EXEC=lightnet
 OBJDIR=./obj/
 
 ifeq ($(LIBSO), 1)

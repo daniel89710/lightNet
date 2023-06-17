@@ -1,6 +1,6 @@
-# LightNet
+# Lightnet
 
-LightNet is a deep learning framework based on the popular darknet platform, designed to create efficient and high-speed Convolutional Neural Networks (CNNs) for computer vision tasks. The framework has been improved and optimized to provide a more versatile and powerful solution for various deep learning challenges.
+lightnet is a deep learning framework based on the popular darknet platform, designed to create efficient and high-speed Convolutional Neural Networks (CNNs) for computer vision tasks. The framework has been improved and optimized to provide a more versatile and powerful solution for various deep learning challenges.
 
 ## Table of Contents
 
@@ -65,12 +65,12 @@ You can find examples of using LightNet's features in the examples directory. Th
 
 ### Inference for Detection
 ```
-./lightNet detector [test/demo] data/bdd100k.data cfg/lightNet-BDD100K-1280x960.cfg weights/lightNet-BDD100K-1280x960.weights [image_name/video_name]
+./lightnet detector [test/demo] data/bdd100k.data cfg/lightNet-BDD100K-1280x960.cfg weights/lightNet-BDD100K-1280x960.weights [image_name/video_name]
 ```
 
 ### Inference for Segmentation
 ```
-./lightNet segmenter [test/demo] data/bdd100k-semseg.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
+./lightnet segmenter [test/demo] data/bdd100k-semseg.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
 ```
 ## Results
 
@@ -85,4 +85,4 @@ You can find examples of using LightNet's features in the examples directory. Th
 
 ## License
 
-LightNet is released under the same YOLO license as darknet. You are free to use, modify, and distribute the code as long as you retain the license notice.
+lightnet is released under the same YOLO license as darknet. You are free to use, modify, and distribute the code as long as you retain the license notice.
