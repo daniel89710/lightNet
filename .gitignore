@@ -66,3 +66,5 @@ uselib_track
 darknet
 lightnet
 vcpkg/
+
+docs/build/
