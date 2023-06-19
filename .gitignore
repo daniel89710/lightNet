@@ -11,6 +11,9 @@
 *.pyc
 *~
 chart*.png
+bad*.list
+anchors.txt
+counters_per_class.txt
 mnist/
 caffe/
 grasp/
