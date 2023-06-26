@@ -1,4 +1,4 @@
-classes = 6
+classes = 3
 train = dataset/crowdhuman/train/train.lst
 valid = dataset/crowdhuman/val/val.lst
 names = data/crowdhuman.names
