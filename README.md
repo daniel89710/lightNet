@@ -19,9 +19,9 @@ LightNet incorporates several cutting-edge techniques and optimizations to impro
 -   Channel Pruning
 -   Post Training Quantization (Under Maintenance)
 
-### Semantic Segmentation Learning
+### Multi-task Learning
 
-In addition to object detection, LightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
+In addition to object detection in darknet, LightNet has been extended to support semantic segmentation learning, which allows for more accurate and detailed segmentation of objects within an image. This feature enables the training of CNN models to recognize and classify individual pixels in an image, allowing for more precise object detection and scene understanding.
 
 For example, semantic segmentation can be used to identify individual objects within an image, such as cars or pedestrians, and label each pixel in the image with the corresponding object class. This can be useful for a variety of applications, including autonomous driving and medical image analysis.
 
@@ -39,12 +39,15 @@ For example, channel pruning can be used to reduce the number of channels in a C
 
 ### Post Training Quantization (Under Maintenance)
 
-Post training quantization is a technique for reducing the memory footprint and computational requirements of a trained CNN model. This feature is currently under maintenance and will be available in a future release.
+Post training quantization (PTQ) is a technique for reducing the memory footprint and computational requirements of a trained CNN model. This feature is currently under maintenance and will be available in a future release.
 
+## Quantized Aware Training (Future Support)
+
+Although PTQ is considered sufficient for LightNet on NVIDIA GPUs, for AI processors that do not support Per-channel Quantization, we may consider adding support for Quantized Aware Training (QAT) as needed.
 
 ## Installation
 
-Please follow the darknet installation instructions to set up LightNet on your machine. Additionaly, you need install sqlite3-dev which is used for training logs.
+Please follow the darknet installation instructions to set up LightNet on your machine. Additionally, you need install sqlite3-dev which is used for training logs.
 
 ```
 sudo apt-get install libsqlite3-dev
@@ -67,13 +70,13 @@ You can find examples of using LightNet's features in the examples directory. Th
 
 ### Inference for Segmentation
 ```
-/lightNet segmenter [test/demo] data/bdd100k-semseg.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
+./lightNet segmenter [test/demo] data/bdd100k-semseg.data cfg/lightSeg-BDD100K-laneMarker-1280x960.cfg weights/lightSeg-BDD100K-laneMarker-1280x960.weights [image_name/video_name]
 ```
 ## Results
 
 ### Results on BDD100K
 
-| Model | Resolutions | GFLOPS | Params | mAP50 | AP@car| AP@person | cfg | weights |
+| Model | Resolution | GFLOPS | Params | mAP50 | AP@car| AP@person | cfg | weights |
 |---|---|---|---|---|---|---|---|---|
 | lightNet | 1280x960 | 58.01 | 9.0M | 55.7 | 81.6 | 67.0| [github](https://github.com/daniel89710/lightNet/blob/master/cfg/lightNet-BDD100K-1280x960.cfg) |[GoogleDrive](https://drive.google.com/file/d/1qTBQ0BkIYqcyu1BwC54_Z9T1_b702HKf/view?usp=sharing) |
 | yolov8x | 640x640 | 246.55 | 70.14M | 55.2 | 80.0 | 63.2 | [github](https://github.com/daniel89710/lightNet/blob/master/cfg/yolov8x-BDD100K-640x640.cfg) | [GoogleDrive](https://drive.google.com/file/d/1hrHeugq0-mL6EtxUAi-rkfrzg6KwgCQQ/view?usp=sharing)|
