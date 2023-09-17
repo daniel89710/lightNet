@@ -8,6 +8,7 @@ LIBSO=0
 ZED_CAMERA=0
 ZED_CAMERA_v2_8=0
 
+#* GPU=0, OPENCV=0 is not supported
 # set GPU=1 and CUDNN=1 to speedup on GPU
 # set CUDNN_HALF=1 to further speedup 3 x times (Mixed-precision on Tensor Cores) GPU: Volta, Xavier, Turing and higher
 # set AVX=1 and OPENMP=1 to speedup on CPU (if error occurs then set AVX=0)
@@ -54,7 +55,7 @@ ARCH= -gencode arch=compute_86,code=[sm_86,compute_86]
 
 
 VPATH=./src/
-EXEC=lightNet
+EXEC=lightnet
 OBJDIR=./obj/
 
 ifeq ($(LIBSO), 1)

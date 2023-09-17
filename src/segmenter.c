@@ -319,7 +319,7 @@ void train_segmenter(char *datacfg, char *cfgfile, char *weightfile, int *gpus, 
     double time_remaining, avg_time = -1, alpha_time = 0.01;
 
     char db_name[4096];
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     sqlite3 *db = open_db(db_name);
     create_loss_table(db);
     create_eval_segmentation(db);
@@ -1053,7 +1053,7 @@ float validate_segmenter_iou(char *datacfg, char *cfgfile, char *weightfile, flo
     char *train_images = option_find_str(options, "train", "data/train.txt");
     list *plist_train = get_paths(train_images);
     int train_images_num = plist_train->size;        
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     int flg_open_db = false;
     if (!db) {
       flg_open_db = true;
@@ -1267,7 +1267,7 @@ float uncertain_segmenter_iou(char *datacfg, char *cfgfile, char *weightfile, fl
     char *train_images = option_find_str(options, "train", "data/train.txt");
     list *plist_train = get_paths(train_images);
     int train_images_num = plist_train->size;        
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     int flg_open_db = false;
     if (!db) {
       flg_open_db = true;

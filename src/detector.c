@@ -193,7 +193,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
     double time_remaining, avg_time = -1, alpha_time = 0.01;
 
     char db_name[4096];
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     sqlite3 *db = open_db(db_name);
     create_loss_table(db);
     create_eval_detection(db);    
@@ -977,7 +977,7 @@ float validate_detector_map(char *datacfg, char *cfgfile, char *weightfile, floa
     char *train_images = option_find_str(options, "train", "data/train.txt");
     list *plist_train = get_paths(train_images);
     int train_images_num = plist_train->size;        
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     if (!db) {
       db = open_db(db_name);      
     }
@@ -1482,7 +1482,7 @@ float validate_detector_per_image(char *datacfg, char *cfgfile, char *weightfile
     char *train_images = option_find_str(options, "train", "data/train.txt");
     list *plist_train = get_paths(train_images);
     int train_images_num = plist_train->size;        
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     if (!db) {
       db = open_db(db_name);      
     }
@@ -2511,7 +2511,7 @@ void calc_sensitivity(char *datacfg, char *cfgfile, char *weightfile, char *file
     network net = parse_network_cfg_custom(cfgfile, 1, 1); // set batch=1
     int i;
     char db_name[4096];
-    sprintf(db_name, "%s/%s_sensitivity_analysis.db", backup_directory, base);
+    sprintf(db_name, "%s/%s_sensitivity_analysis.sqlite", backup_directory, base);
     sqlite3 *db = open_db(db_name);
     create_eval_detection(db);        
 
@@ -2611,7 +2611,7 @@ void calibrate(char *datacfg, char *cfgfile, char *weightfile, float thresh_calc
     char *backup_directory = option_find_str(options, "backup", "/backup/");
     char *train_images = option_find_str(options, "train", "data/train.txt");
     list *plist_train = get_paths(train_images);
-    sprintf(db_name, "%s/%s.db",backup_directory, base);
+    sprintf(db_name, "%s/%s.sqlite",backup_directory, base);
     if (!db) {
       db = open_db(db_name);      
     }

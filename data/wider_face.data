@@ -1,0 +1,5 @@
+classes = 1
+train = dataset/wider_face/data/WIDER_train/train.lst
+valid = dataset/wider_face/data/WIDER_val/val.lst
+names = data/wider_face.names
+backup = weights
