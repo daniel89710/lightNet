@@ -17,5 +17,8 @@ sudo apt install libopencv-dev libsqlite3-dev
 ```bash
 git clone https://github.com/yunkai1841/lightnet.git
 cd lightnet
-make -j
+make -j 4
 ```
+
+build artifact will be located at `./lightnet`
+
